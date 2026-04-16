@@ -2,6 +2,8 @@
 
 An intelligent AI-powered chat application that allows you to upload multiple PDF documents and have conversations with their content using Google Gemini AI.
 
+🌐 **[Try it Live](https://chattpg.streamlit.app/)** - Click here to use the deployed application!
+
 ## ✨ Features
 
 - 📄 **Multi-format Support**: Upload PDF, TXT, and Markdown files
