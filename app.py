@@ -57,8 +57,6 @@ def main():
     
     # Header
     st.title("📚 RAG-Based AI Chatbot (Web + PDF QA System)")
-    current_model = st.session_state.rag_system.llm.model_name
-    st.markdown(f"*Powered by NVIDIA {current_model} with Semantic Search & Pinecone Vector Database*")
     
     # Sidebar
     with st.sidebar:
@@ -127,15 +125,6 @@ def main():
                 st.session_state.processed_sources = []
                 st.session_state.conversation_history = []
                 st.rerun()
-        
-        st.divider()
-        
-        # System info
-        st.subheader("⚙️ System Info")
-        st.write(f"**Model:** {st.session_state.rag_system.llm.model_name}")
-        st.write(f"**Embeddings:** Google Embedding-001")
-        st.write(f"**Database:** {'Pinecone' if st.session_state.rag_system.vector_db.initialized else 'In-Memory'}")
-        st.write(f"**Loaded Chunks:** {len(st.session_state.rag_system.in_memory_chunks)}")
     
     # Main content area
     tab1, tab2 = st.tabs(["💬 Chat", "📊 Conversation History"])
